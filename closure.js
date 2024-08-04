@@ -67,3 +67,32 @@ function x5(){
 }
 
 x5(); //output: 0 1 2 3 4 5
+
+function x6(){
+    var a=1000;
+    function innerfn(){
+        console.log('Return function', a);
+    }
+    return innerfn;    
+}
+
+x6(); //output: returns only function
+x6()(); //output: Return function 1000
+var outterfn = x6();
+outterfn(); //output: Return function 1000
+
+function x7(){
+    var c= 50;
+    function x7inner(b){
+    
+    function innerfn(){
+        console.log(a, b, c);
+    }
+    let a=1000;
+    return innerfn;    
+}
+return x7inner;
+}
+
+x7()(200)('hello'); //output: returns only function
+
