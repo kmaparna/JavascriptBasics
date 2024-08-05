@@ -94,5 +94,40 @@ function x7(){
 return x7inner;
 }
 
-x7()(200)('hello'); //output: returns only function
+x7()(200)('hello'); //1000 200 50
+
+//function to incremet and decrement counter using closue
+function Counter(){
+    var count = 0;
+    this.incrementCounter = function(){
+count++;
+console.log('Increment count', count);
+    }
+
+    this.decrementCounter = function(){
+        count--;
+        console.log('Decrement count', count);
+            }
+}
+
+var counter1 = new Counter(); // Counter acts as constructor, so new keyword
+counter1.incrementCounter();
+counter1.decrementCounter();
+
+//Garbage collection example
+function garbagecoll(){
+    var a = 10, b=200;
+    return function innerfn(){
+        console.log(a);
+    }
+}
+
+var garbagefn = garbagecoll();
+garbagefn();
+//output: 10 
+//if i try to access console.log(b) while debugging at line121 it throws reference error, because while forming 
+//closure b is unused and thrown into garbage to avoid memory leak.
+
+
+
 
