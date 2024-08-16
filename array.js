@@ -33,9 +33,62 @@
     const looparray = [100, 200];
     looparray.forEach((element, index) => {
       console.log(`The Element at index ${index}: ${element}`);
-    });  
+    });  //forloop Modifies the same looparray.
     //Output: 
     //The Element at index 0: 100
     // The Element at index 1: 200
+
+    //Using map to Access Elements in an Array
+    const maparray = [10, 20];
+    const newarray = maparray.map((element, index) => {
+        return `The Element at index ${index}: ${element}`;
+    }); //map creates a new array and updates item of the new array.
+    console.log(newarray);
+
+    //Output: 
+    // [
+    //The Element at index 0: 100
+    // The Element at index 1: 200
+    //]
+   
+
+    //Using find() Method in array
+    const findArray = [20, 30, 40];
+    const findResult = findArray.find((element) => element > 20) //Returns first element in the array that satisfies a provided testing function
+    console.log('Find item greater than 20 using find: ', findResult);
+
+    //Output: 
+    //Find item greater than 20: 30
+
+    //Using Destructuring Assignment in array
+    let [firstFruit, , thirdFruit] = ["apple", "banana", "Pear"];
+    console.log('First Fruit:', firstFruit);
+    console.log('Second Fruit:', );
+    console.log('Third Fruit:', thirdFruit);
+
+    //Output: 
+    // First Fruit: apple
+    // Second Fruit:
+    // Third Fruit: Pear
+
+    //Using Destructuring Assignment in array
+    let [firstFruit1, , thirdFruit1] = ["apple", "banana"];
+    console.log('First Fruit:', firstFruit1);
+    console.log('Second Fruit:', );
+    console.log('Third Fruit:', thirdFruit1);
+
+    //Output: 
+    // First Fruit: apple
+    // Second Fruit:
+    // Third Fruit: undefined
+
+    //Using filter Method in array
+    const filterArray = [10,20,30,40,50];
+    const filterResult = filterArray.filter((element) => element > 20);
+    console.log('Find item greater than 20 using filter: ', filterResult);
+
+    //Output:
+    //[30,40,50]
+
 
     
