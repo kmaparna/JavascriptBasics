@@ -12,5 +12,16 @@ AdditionofNumbers();
 console.log("Value of n is: " + n);
 
 
+/* Redeclaring Const */
+function RedeclaringConst(){
+  const a = 10;
+  console.log("Value of Const:", a);
+  // const a=20;
+  // console.log("Redeclared Value of Const:", a);
+}
+
+//Output:  Cannot declare block scoped variable a
+
+
 
 
