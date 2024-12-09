@@ -90,5 +90,23 @@
     //Output:
     //[30,40,50]
 
+//Accessing array
+let text="Engineer";
+/* uncomment while executing */
+//text[11] = "F";
+//console.log("Accessing text: ", text);
+/* uncomment while executing */
 
-    
+//Output: Uncaught TypeError: Cannot create property '11' on string 'Engineer'
+
+let text1="Engineer";
+/* uncomment while executing */
+// text1[1] = "F";
+// console.log("Accessing text: ", text);
+/* uncomment while executing */
+
+//Output: Uncaught TypeError: Cannot assign to read only property '1' of string 'Engineer'
+
+
+
+
