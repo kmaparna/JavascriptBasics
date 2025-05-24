@@ -122,5 +122,5 @@ console.log("with array at index -2", withArray.at(-2));
 //Real-time usecase
 const multipliedarray = withArray.with(-1, 14).map(x => x * 2)
 console.log("change witharray index -1 to 14 and multiply with array by 2", multipliedarray);
-
+//Output: [4, 8, 12, 28]
 
