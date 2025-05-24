@@ -107,6 +107,20 @@ let text1="Engineer";
 
 //Output: Uncaught TypeError: Cannot assign to read only property '1' of string 'Engineer'
 
-
+//javascript with
+const withArray = [2,4,6,8];
+//Replace 6 with 10 in the array. We can use with if we do not want to mutate the original array
+//withArray[2] = 10, will give the same result but it updates the original array
+const newWithArray = withArray.with(2, 10); //with(index, newitemtobereplaced)
+console.log("newWithArray ", newWithArray);
+//Output: [2, 4, 10, 8]
+const newNegativeWithArray = withArray.with(-2, 12); //with(index, newitemtobereplaced)
+console.log("newNegativeWithArray ", newNegativeWithArray);
+//Output: [2, 4, 12, 8]
+//We can use javascript at to fetch the items from the array
+console.log("with array at index -2", withArray.at(-2));
+//Real-time usecase
+const multipliedarray = withArray.with(-1, 14).map(x => x * 2)
+console.log("change witharray index -1 to 14 and multiply with array by 2", multipliedarray);
 
 
